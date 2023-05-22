@@ -42,6 +42,16 @@ function getReversedString(string) {
 console.log(getReversedString('Hello!')); // '!olleH'
 console.log(getReversedString('Arrays')); // 'syarrA'
 
+console.log('~~~~~~~~~~~~~ Is palindrome ~~~~~~~~~~~~')
+
+function isPalindrome(string) {
+    const cleanString = string.toLowerCase().replaceAll(' ', '');
+    return cleanString === getReversedString(cleanString);
+}
+console.log(isPalindrome('Kayak')); // true
+console.log(isPalindrome('Racecar')); // true
+console.log(isPalindrome('Was it a cat I saw')); // true
+console.log(isPalindrome('Hello!')); // false
 
 
 console.log('~~~~~~~~~~~~~ The end ~~~~~~~~~~~~')
