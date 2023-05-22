@@ -35,4 +35,13 @@ const numbers = [1, 2, 3];
 console.log(getSquaredNumbers(numbers)); // [1, 4, 9]
 console.log(numbers); // [1, 2, 3]
 
+console.log('~~~~~~~~~~~~~ Get reversed string ~~~~~~~~~~~~')
+function getReversedString(string) {
+    return string.split('').reverse().join('');
+}
+console.log(getReversedString('Hello!')); // '!olleH'
+console.log(getReversedString('Arrays')); // 'syarrA'
+
+
+
 console.log('~~~~~~~~~~~~~ The end ~~~~~~~~~~~~')
