@@ -19,4 +19,20 @@ function getSmallestNumberWithForLoop(numbersArray) {
 console.log(getSmallestNumberWithForLoop([2, -5, 10, 1, 4])); // -5
 console.log(getSmallestNumberWithForLoop([200, 25, 4, 123, 87])); // 4
 
+console.log('~~~~~~~~~~~~~ Get squared numbers ~~~~~~~~~~~~')
+
+function getSquaredNumbers(numbers) {
+    let squaredNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        squaredNumbers.push(numbers[i] ** 2);
+    }
+    return squaredNumbers;
+}
+console.log(getSquaredNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
+console.log(getSquaredNumbers([6, 7, 8, 9, 10])); // [36, 49, 64, 81, 100]
+
+const numbers = [1, 2, 3];
+console.log(getSquaredNumbers(numbers)); // [1, 4, 9]
+console.log(numbers); // [1, 2, 3]
+
 console.log('~~~~~~~~~~~~~ The end ~~~~~~~~~~~~')
