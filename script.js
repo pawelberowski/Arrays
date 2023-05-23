@@ -100,4 +100,51 @@ console.log(lettersObject);
 //   z: 1
 //
 
+console.log('~~~~~~~~~~~~~ Get age difference ~~~~~~~~~~~~')
+
+const peopleArray = [
+    {
+        name: 'Adam',
+        age: 20
+    },
+    {
+        name: 'Amanda',
+        age: 5
+    },
+    {
+        name: 'John',
+        age: 75
+    },
+    {
+        name: 'Dave',
+        age: 15
+    }
+];
+
+function getYoungestPerson(people) {
+    let youngest = people[0].age;
+    for (let i = 1; i < people.length; i++) {
+        if (youngest > people[i].age) {
+            youngest = people[i].age;
+        }
+    }
+    return youngest;
+}
+
+function getOldestPerson(people) {
+    let oldest = people[0].age;
+    for (let i = 1; i < people.length; i++) {
+        if (oldest < people[i].age) {
+            oldest = people[i].age;
+        }
+    }
+    return oldest;
+}
+
+function getAgeDifference(people) {
+    return getOldestPerson(people) - getYoungestPerson(people)
+}
+
+console.log(getAgeDifference(peopleArray)); // 70
+
 console.log('~~~~~~~~~~~~~ The end ~~~~~~~~~~~~')
